@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Freelancer Portfolio</title>
+</head>
+<body bgcolor="lightblue">
+
+    <center>
+        <h1>Freelancer Portfolio</h1>
+        <img src="https://via.placeholder.com/150" alt="Profile Photo" width="150" height="150">
+        <h2>Prasethi</h2>
+        <p>Web Developer | Freelancer</p>
+    </center>
+
+    <hr>
+
+    <h2>About Me</h2>
+    <p>
+        Hello! I am a freelance web developer. I create simple and attractive
+        websites using HTML, CSS, and JavaScript.
+    </p>
+
+    <hr>
+
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+    </ul>
+
+    <hr>
+
+    <h2>Projects</h2>
+    <ol>
+        <li>Personal Portfolio Website</li>
+        <li>Student Management System</li>
+        <li>E-Commerce Website</li>
+    </ol>
+
+    <hr>
+
+    <h2>Contact Me</h2>
+    <p>Email:Prasethi@example.com</p>
+    <p>Phone: +91 9876543210</p>
+
+    <hr>
+
+    <center>
+        <p>&copy; 2026 Freelancer Portfolio. All Rights Reserved.</p>
+    </center>
+
+</body>
+</html>
