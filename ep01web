@@ -3,53 +3,163 @@
 <head>
     <title>Freelancer Portfolio</title>
 </head>
-<body bgcolor="lightblue">
 
-    <center>
-        <h1>Freelancer Portfolio</h1>
-        <img src="https://via.placeholder.com/150" alt="Profile Photo" width="150" height="150">
-        <h2>Prasethi</h2>
-        <p>Web Developer | Freelancer</p>
-    </center>
+<body>
 
-    <hr>
+<center>
 
-    <h2>About Me</h2>
-    <p>
-        Hello! I am a freelance web developer. I create simple and attractive
-        websites using HTML, CSS, and JavaScript.
-    </p>
+<h1>Freelancer Portfolio</h1>
 
-    <hr>
+<img src="imgg.png" alt="Profile Photo" width="180" height="180">
 
-    <h2>Skills</h2>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-    </ul>
+<h2>Yasin Shree</h2>
 
-    <hr>
+<p><b>Web Developer | Freelancer | UI Designer</b></p>
 
-    <h2>Projects</h2>
-    <ol>
-        <li>Personal Portfolio Website</li>
-        <li>Student Management System</li>
-        <li>E-Commerce Website</li>
-    </ol>
+<hr width="80%">
 
-    <hr>
+</center>
 
-    <h2>Contact Me</h2>
-    <p>Email:Prasethi@example.com</p>
-    <p>Phone: +91 9876543210</p>
+<h2>Home</h2>
 
-    <hr>
+<p>
+Welcome to my freelancer portfolio website. I am a passionate web developer who creates responsive and user-friendly websites using HTML5.
+</p>
 
-    <center>
-        <p>&copy; 2026 Freelancer Portfolio. All Rights Reserved.</p>
-    </center>
+<hr>
+
+<h2>About Me</h2>
+
+<p>
+I am a B.Tech Computer Science Engineering student. I enjoy developing websites and learning new technologies. My goal is to become a successful freelance web developer.
+</p>
+
+<hr>
+
+<h2>Skills</h2>
+
+<ul>
+    <li>HTML5</li>
+    <li>CSS3</li>
+    <li>JavaScript</li>
+    <li>Bootstrap</li>
+    <li>Python</li>
+</ul>
+
+<hr>
+
+<h2>Services</h2>
+
+<table border="1" cellpadding="10" width="80%">
+<tr>
+<th>Service</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>Website Design</td>
+<td>Create responsive websites using HTML5.</td>
+</tr>
+
+<tr>
+<td>Portfolio Website</td>
+<td>Develop portfolio websites for students.</td>
+</tr>
+
+<tr>
+<td>Landing Page</td>
+<td>Create attractive landing pages.</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Projects</h2>
+
+<table border="1" cellpadding="10" width="80%">
+
+<tr>
+<th>Project Name</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>Travel Website</td>
+<td>Responsive travel website using HTML5.</td>
+</tr>
+
+<tr>
+<td>E-Commerce Website</td>
+<td>Online shopping website.</td>
+</tr>
+
+<tr>
+<td>College Website</td>
+<td>Simple college information website.</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Education</h2>
+
+<table border="1" cellpadding="10" width="80%">
+
+<tr>
+<th>Qualification</th>
+<th>Institution</th>
+<th>Year</th>
+</tr>
+
+<tr>
+<td>B.Tech CSE</td>
+<td>Your College Name</td>
+<td>2026</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Contact Me</h2>
+
+<form>
+
+<label>Name:</label><br>
+<input type="text" placeholder="Enter your name"><br><br>
+
+<label>Email:</label><br>
+<input type="email" placeholder="Enter your email"><br><br>
+
+<label>Mobile:</label><br>
+<input type="tel" placeholder="Enter mobile number"><br><br>
+
+<label>Message:</label><br>
+<textarea rows="5" cols="40"></textarea><br><br>
+
+<input type="submit" value="Send">
+
+<input type="reset" value="Clear">
+
+</form>
+
+<hr>
+
+<center>
+
+<h3>Contact Information</h3>
+
+<p>Email : yourname@gmail.com</p>
+
+<p>Phone : +91 9876543210</p>
+
+<p>Location : Chennai, India</p>
+
+<p><b>&copy; 2026 Freelancer Portfolio. All Rights Reserved.</b></p>
+
+</center>
 
 </body>
 </html>
