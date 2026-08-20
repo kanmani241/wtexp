@@ -1,533 +1,645 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
-    <title>Freelancer Portfolio</title>
+
+    <title>Responsive Web Design</title>
+
     <style>
 
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #f2f2f2;
-            color: #333;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
         }
 
         header {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 25px;
+            width: 100%;
+            background-color: white;
+            border-bottom: 1px solid black;
         }
 
-        header h1 {
+        .navbar {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+        }
+
+        .nav-links a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .nav-links a:active {
+            background-color: black;
+            color: white;
+        }
+
+        .hero {
+            background-color: #8faeaa;
+
+            min-height: 230px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        .hero h1 {
+            color: white;
+
+            font-size: 42px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
             margin: 0;
         }
 
-        .profile {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            border: 4px solid white;
-        }
-
-        nav {
-            background-color: #34495e;
-            text-align: center;
-            padding: 12px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #f1c40f;
-        }
-        main {
+        .container {
             width: 90%;
-            margin: 20px auto;
+            max-width: 1100px;
+
+            margin: 35px auto;
         }
-        .box {
+
+        .topics {
+            display: grid;
+
+            grid-template-columns:
+            repeat(3, 1fr);
+
+            gap: 30px;
+        }
+
+        .topic {
             background-color: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-        }
-        .box h2 {
-            color: #2c3e50;
-        }
 
-        li {
-            margin: 10px;
-        }
-        .card {
-            background-color: #ecf0f1;
+            border: 1px solid black;
+
             padding: 15px;
-            margin-top: 15px;
-            border-left: 5px solid #3498db;
+
+            margin-bottom: 20px;
         }
 
-        form {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        input,
-        select,
-        textarea {
+        .topic h2 {
+            color: black;
+
+            background-color: white;
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            text-align: center;
+
+            margin: 0 0 15px 0;
+
             padding: 10px;
-            border: 1px solid #aaa;
-            border-radius: 5px;
+
+            border: 1px solid black;
+        }
+
+        .topic p {
+            color: black;
+
             font-size: 15px;
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        input[type="date"],
-        input[type="file"],
-        select,
-        textarea {
-            width: 100%;
-            box-sizing: border-box;
+
+            font-weight: bold;
+
+            line-height: 1.6;
+
+            text-align: justify;
+
+            margin-top: 10px;
         }
 
-        input[type="radio"],
-        input[type="checkbox"] {
-            width: auto;
-        }
+        .margin-topic {
+            margin-top: 25px;
 
-        input[type="submit"],
-        input[type="reset"] {
-            background-color: #2c3e50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
+            margin-bottom: 25px;
+
+            margin-left: 10px;
+
             margin-right: 10px;
         }
 
-        input[type="submit"]:hover,
-        input[type="reset"]:hover {
-            background-color: #3498db;
+        .text-topic {
+            color: black;
+
+            letter-spacing: 1px;
+
+            text-align: justify;
+
+            font-weight: bold;
+        }
+
+        .font-topic {
+            font-family: Georgia, serif;
+
+            font-style: italic;
+
+            font-weight: bold;
+
+            font-size: 18px;
+        }
+
+        .background-topic {
+            background-color: white;
+
+            padding: 15px;
+
+            border: 1px solid black;
+
+            color: black;
+
+            font-weight: bold;
         }
 
         .multicolumn {
             column-count: 3;
-            column-gap: 30px;
-            column-rule: 2px solid #ccc;
+
+            column-gap: 25px;
+
+            column-rule: 1px solid black;
+
             text-align: justify;
+
+            font-weight: bold;
+
+            color: black;
         }
 
-        article {
-            background-color: #ecf0f1;
-            padding: 15px;
-            margin-top: 15px;
-            border-left: 5px solid #3498db;
+        .padding-topic {
+            padding-top: 20px;
+
+            padding-bottom: 20px;
+
+            padding-left: 20px;
+
+            padding-right: 20px;
+
+            border: 1px solid black;
+
+            font-weight: bold;
+
+            color: black;
         }
 
-        aside {
-            background-color: #fff3cd;
-            padding: 15px;
-            margin-top: 20px;
-            border: 1px solid #ffeeba;
+        .display-inline {
+            display: inline;
+
+            border: 1px solid black;
+
+            padding: 5px;
+
+            font-weight: bold;
+
+            color: black;
+        }
+
+        .display-block {
+            display: block;
+
+            border: 1px solid black;
+
+            padding: 10px;
+
+            margin-top: 10px;
+
+            font-weight: bold;
+
+            color: black;
+        }
+
+        .topic ul {
+            list-style-type: circle;
+
+            padding-left: 25px;
+        }
+
+        .topic li {
+            padding: 5px;
+
+            font-weight: bold;
+
+            color: black;
+        }
+
+        .topic a {
+            color: black;
+
+            font-weight: bold;
+
+            text-decoration: underline;
         }
 
         footer {
-            background-color: #2c3e50;
-            color: white;
+            background-color: white;
+
+            border-top: 1px solid black;
+
             text-align: center;
-            padding: 15px;
-            margin-top: 20px;
+
+            padding: 20px;
+
+            margin-top: 30px;
         }
+
+        footer p {
+            font-weight: bold;
+
+            color: black;
+        }
+
+        .contact-box {
+            width: 90%;
+
+            max-width: 500px;
+
+            margin: 20px auto;
+
+            padding: 15px;
+
+            border: 1px solid black;
+
+            background-color: white;
+
+            text-align: left;
+        }
+
+        .contact-box h2 {
+            color: black;
+
+            text-align: center;
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            padding: 10px;
+
+            margin-top: 0;
+
+            border: 1px solid black;
+        }
+
+        .contact-box p {
+            color: black;
+
+            font-weight: bold;
+
+            font-size: 15px;
+
+            line-height: 1.6;
+
+            margin: 8px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .topics {
+                grid-template-columns:
+                repeat(2, 1fr);
+            }
+
+            .multicolumn {
+                column-count: 2;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+
+            .nav-links {
+                flex-direction: column;
+
+                gap: 5px;
+
+                text-align: center;
+            }
+
+            .hero {
+                min-height: 180px;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .topics {
+                grid-template-columns: 1fr;
+            }
+
+            .multicolumn {
+                column-count: 1;
+            }
+
+            .contact-box {
+                width: 85%;
+            }
+        }
+
     </style>
 
 </head>
+
 <body>
+
     <header>
-        <img src="imgg.png"
-             alt="Profile Photo"
-             class="profile">
 
-        <h1>Yasin Shree</h1>
-        <p>
-            Web Developer | Freelancer | UI Designer
-        </p>
+        <div class="navbar">
+
+            <div class="logo">
+                WEB DESIGN
+            </div>
+
+            <nav class="nav-links">
+
+                <a href="#home">Home</a>
+
+                <a href="#topics">Topics</a>
+
+                <a href="#about">About</a>
+
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+        </div>
+
     </header>
-    <nav>
-        <a href="#home">Home</a>
 
-        <a href="#about">About</a>
+    <section class="hero" id="home">
 
-        <a href="#skills">Skills</a>
+        <h1>
+            RESPONSIVE WEB DESIGN
+        </h1>
 
-        <a href="#services">Services</a>
+    </section>
 
-        <a href="#projects">Projects</a>
+    <main class="container" id="topics">
 
-        <a href="#contact">Contact</a>
+        <div class="topics">
 
-        <a href="#job">Job Application</a>
+            <article class="topic">
 
-        <a href="#htmlcss">HTML5 & CSS3</a>
-    </nav>
-    <main>
-        <section id="home" class="box">
-            <h2>Home</h2>
-            <p>
-                Welcome to my Freelancer Portfolio Website.
-                I design responsive websites using HTML5,
-                CSS3 and JavaScript.
-            </p>
-            <p>
-                I enjoy creating beautiful and user-friendly
-                web pages.
-            </p>
-        </section>
-        <section id="about" class="box">
+                <h2>
+                    MARGINS
+                </h2>
 
-            <h2>About Me</h2>
+                <p class="margin-topic">
 
-            <p>
-                I am a Computer Science Engineering student
-                interested in Web Development.
-            </p>
+                    The margin property creates space
+                    outside an HTML element.
 
-            <p>
-                I love designing websites and learning
-                new technologies.
-            </p>
+                    CSS provides margin-top,
+                    margin-bottom,
+                    margin-left and margin-right.
 
-            <p>
-                My goal is to become a professional
-                Full Stack Web Developer.
-            </p>
-        </section>
-        <section id="skills" class="box">
-            <h2>Skills</h2>
-            <ul>
-
-                <li>HTML5</li>
-
-                <li>CSS3</li>
-
-                <li>JavaScript</li>
-
-                <li>Bootstrap</li>
-
-                <li>Python</li>
-
-                <li>SQL</li>
-            </ul>
-        </section>
-        <section id="services" class="box">
-            <h2>Services</h2>
-            <div class="card">
-
-                <h3>Website Development</h3>
-                <p>
-                    Create responsive websites using
-                    HTML5, CSS3 and JavaScript.
-                </p>
-            </div>
-            <div class="card">
-                <h3>Portfolio Design</h3>
-                <p>
-                    Professional portfolio websites
-                    for students and freelancers.
-                </p>
-            </div>
-            <div class="card">
-                <h3>Landing Page</h3>
-                <p>
-                    Modern and attractive landing pages
-                    for businesses.
-                </p>
-            </div>
-        </section>
-        <section id="projects" class="box">
-            <h2>Projects</h2>
-            <div class="card">
-                <h3>Travel Website</h3>
-                <p>
-                    Designed a responsive travel website
-                    using HTML5 and CSS.
-                </p>
-            </div>
-            <div class="card">
-                <h3>E-Commerce Website</h3>
-                <p>
-                    Developed an online shopping website
-                    with product details.
-                </p>
-            </div>
-            <div class="card">
-                <h3>College Website</h3>
-                <p>
-                    Created a college website with
-                    student information.
-                </p>
-            </div>
-
-        </section>
-        <section id="contact" class="box">
-            <h2>Contact Me</h2>
-            <p>
-                <b>Name:</b> Yasin Shree
-            </p>
-            <p>
-                <b>Email:</b> yasinshree@gmail.com
-            </p>
-            <p>
-                <b>Phone:</b> +91 98765432101
-            </p>
-            <p>
-                <b>Address:</b> Chennai, Tamil Nadu, India
-            </p>
-
-        </section>
-        <section id="job" class="box">
-
-            <h2>Job Application</h2>
-            <form id="jobForm">
-                <label>Full Name</label>
-                <br>
-                <input type="text"
-                       name="fullname"
-                       maxlength="30"
-                       required
-                       placeholder="Enter Your Full Name">
-                <br><br>
-                <label>Email ID</label>
-                <br>
-                <input type="email"
-                       id="email"
-                       name="email"
-                       placeholder="example@gmail.com"
-                       required>
-                <br><br>
-                <label>Phone Number</label>
-                <br>
-                <input type="tel"
-                       name="phone"
-                       pattern="[0-9]{11}"
-                       maxlength="11"
-                       required
-                       placeholder="Enter 11 Digit Number">
-                <br><br>
-                <label>Date of Birth</label>
-                <br>
-                <input type="date"
-                       name="dob"
-                       required>
-
-                <br><br>
-                <label>Gender</label>
-                <br>
-                <input type="radio"
-                       name="gender"
-                       value="Male"
-                       required>
-                Male
-                <input type="radio"
-                       name="gender"
-                       value="Female">
-                Female
-                <br><br>
-                <label>Qualification</label>
-                <br>
-                <select name="qualification"
-                        required>
-
-                    <option value="">
-                        Select Qualification
-                    </option>
-
-                    <option>B.Tech</option>
-
-                    <option>B.E</option>
-
-                    <option>B.Sc</option>
-
-                    <option>M.Tech</option>
-
-                    <option>MCA</option>
-
-                </select>
-                <br><br>
-                <label>Skills</label>
-
-                <br>
-                <input type="checkbox"
-                       name="skills"
-                       value="HTML">
-
-                HTML
-                <input type="checkbox"
-                       name="skills"
-                       value="CSS">
-
-                CSS
-                <input type="checkbox"
-                       name="skills"
-                       value="JavaScript">
-
-                JavaScript
-                <input type="checkbox"
-                       name="skills"
-                       value="Python">
-
-                Python
-                <input type="checkbox"
-                       name="skills"
-                       value="SQL">
-
-                SQL
-                <br><br>
-                <label>Experience</label>
-                <br>
-                <select name="experience">
-
-                    <option>Fresher</option>
-
-                    <option>1 Year</option>
-
-                    <option>2 Years</option>
-
-                    <option>3+ Years</option>
-
-                </select>
-                <br><br>
-                <label>Address</label>
-
-                <br>
-                <textarea rows="5"
-                          name="address"
-                          placeholder="Enter Your Address"
-                          required></textarea>
-
-                <br><br>
-                <label>Upload Resume</label>
-
-                <br>
-                <input type="file"
-                       name="resume"
-                       required>
-
-                <br><br>
-                <input type="submit"
-                       value="Apply Now">
-
-                <input type="reset"
-                       value="Clear">
-            </form>
-        </section>
-        <section id="htmlcss" class="box">
-
-            <h2>HTML5 and CSS3 Layout Demonstration</h2>
-            <h3>Normal Flow Layout</h3>
-            <p>
-                This is an example of normal flow layout
-                using HTML5 semantic elements and CSS3
-                properties.
-            </p>
-            <p>
-                Elements are placed one after another
-                from top to bottom according to the
-                normal document flow.
-            </p>
-            <article>
-
-                <h3>HTML5</h3>
-
-                <p>
-                    HTML5 provides semantic elements such as
-                    header, nav, main, section, article,
-                    aside and footer.
                 </p>
 
             </article>
-            <article>
 
-                <h3>CSS3</h3>
+            <article class="topic">
 
-                <p>
-                    CSS3 is used to style HTML elements
-                    using colors, fonts, borders, margins,
-                    padding and layouts.
+                <h2>
+                    FORMATTING TEXT
+                </h2>
+
+                <p class="text-topic">
+
+                    CSS provides different properties
+                    for formatting text.
+
+                    These include color,
+                    letter-spacing,
+                    text-align and text-shadow.
+
                 </p>
 
             </article>
-            <h3>Multi-Column Layout</h3>
 
-            <div class="multicolumn">
+            <article class="topic">
 
-                <p>
-                    HTML5 is the latest version of HyperText
-                    Markup Language. It is used to create
-                    the structure of webpages. HTML5 provides
-                    many semantic elements that make webpages
-                    easier to understand.
+                <h2>
+                    FONT
+                </h2>
+
+                <p class="font-topic">
+
+                    CSS font properties include
+                    font-family, font-style,
+                    font-weight and font-size.
+
                 </p>
 
+            </article>
 
-                <p>
-                    CSS3 stands for Cascading Style Sheets
-                    Level 3. It is used to control the
-                    appearance of webpages. CSS3 provides
-                    properties for colors, backgrounds,
-                    borders, fonts and layouts.
+            <article class="topic">
+
+                <h2>
+                    BACKGROUND
+                </h2>
+
+                <p class="background-topic">
+
+                    Background properties are used
+                    to define the background effects
+                    of HTML elements.
+
+                    Background color and
+                    background image can be used.
+
                 </p>
 
+            </article>
 
-                <p>
-                    The CSS3 multi-column layout allows
-                    content to be displayed in multiple
-                    columns. The column-count property
-                    specifies the number of columns.
+            <article class="topic">
+
+                <h2>
+                    PADDING
+                </h2>
+
+                <p class="padding-topic">
+
+                    Padding creates space between
+                    the content and the border
+                    of an HTML element.
+
                 </p>
 
+            </article>
+
+            <article class="topic">
+
+                <h2>
+                    DISPLAY
+                </h2>
 
                 <p>
-                    The column-gap property specifies the
-                    space between columns. The column-rule
-                    property adds a line between the columns.
+
+                    <span class="display-inline">
+                        INLINE
+                    </span>
+
                 </p>
 
+                <p class="display-block">
+                    BLOCK
+                </p>
+
+            </article>
+
+            <article class="topic">
+
+                <h2>
+                    LIST
+                </h2>
+
+                <ul>
+
+                    <li>Margin</li>
+
+                    <li>Padding</li>
+
+                    <li>Font</li>
+
+                    <li>Background</li>
+
+                    <li>Display</li>
+
+                </ul>
+
+            </article>
+
+            <article class="topic">
+
+                <h2>
+                    MULTICOLUMN
+                </h2>
+
+                <div class="multicolumn">
+
+                    CSS3 provides a
+                    multicolumn layout
+                    for displaying content
+                    in multiple columns.
+
+                </div>
+
+            </article>
+
+            <article class="topic">
+
+                <h2>
+                    LINKS
+                </h2>
 
                 <p>
-                    Responsive webpages can be created using
-                    CSS3 media queries. This allows webpages
-                    to work properly on computers, tablets
-                    and mobile devices.
+
+                    CSS can style hyperlinks
+                    using link, visited,
+                    hover and active states.
+
                 </p>
 
-            </div>
-        </section>
-        <aside>
+            </article>
 
-            <h3>Important Note</h3>
+        </div>
 
-            <p>
-                This webpage demonstrates HTML5 semantic
-                tags, CSS3 properties, normal flow and
-                multi-column layout.
-            </p>
-
-        </aside>
     </main>
-    <footer>
+
+    <footer id="about">
+
         <p>
-            &copy; 2026 Freelancer Portfolio Website
+            Responsive Webpage Using HTML5 and CSS3
+        </p>
+
+        <div class="contact-box" id="contact">
+
+            <h2>
+                CONTACT INFO
+            </h2>
+
+            <p>
+                <strong>Name:</strong>
+                Ysinshree
+            </p>
+
+            <p>
+                <strong>Mail ID:</strong>
+                ysinshree@gmail.com
+            </p>
+
+            <p>
+                <strong>Phone Number:</strong>
+                +91 98765 43210
+            </p>
+
+            <p>
+                <strong>Address:</strong>
+                Coimbatore, Tamil Nadu, India
+            </p>
+
+        </div>
+
+        <p>
+            Web Design Practical
         </p>
 
     </footer>
+
 </body>
+
 </html>
